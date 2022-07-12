@@ -17,3 +17,8 @@ microservice:
     endpoints:
       createDelivery: 
         uri= http://localhost:8282/delivery/createDelivery
+        
+  payment-service:
+    endpoints:
+      doPayment: 
+        uri: http://localhost:8383/payment/doPayment
