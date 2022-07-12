@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: CONFIG-SERVER
+  cloud:
+   config:
+    server:
+     git:
+      uri: https://github.com/KarthikB360/EurekaProject/tree/master/Configuration
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+
+server:
+  port: 9196
