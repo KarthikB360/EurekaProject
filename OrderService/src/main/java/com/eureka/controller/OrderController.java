@@ -6,8 +6,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.eureka.dto.OrderRequestDto;
-import com.eureka.dto.OrderResponseDto;
+import com.eureka.model.Order;
 import com.eureka.service.OrderServices;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
@@ -19,9 +18,9 @@ public class OrderController {
 	OrderServices orderServices;
 
 	@PostMapping("/createOrder")
-	public OrderResponseDto createOrder(@RequestBody OrderRequestDto request) throws JsonProcessingException {
+	public Order createOrder(@RequestBody Order order) throws JsonProcessingException {
 
-		return orderServices.saveOrder(request);
+		return orderServices.saveOrder(order);
 	}
 
 }
